@@ -6,7 +6,230 @@
         <meta name="viewport" content="width-device-width, initial-scale=1" />
         <meta charset="utf-8">
     </head>
-    <body>
+    <body>  
+     <style>
+      @import url('https://fonts.googleapis.com/css?family=Antom');
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
+
+* {
+    margin: 0px;
+    padding:   0px;
+}
+
+body {
+     font-family: Arial, Helvetica, sans-serif ;
+     font-size: 15px;
+     background-color: white;
+     color:red
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    background-image: url(projetgit/img/home.jpg);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid grey; 
+}  
+header h1{
+    font-family: 'Nosifer', cursive;
+    font-size: 60PX;
+    text-shadow: 0px 0px 15px black;
+    transition: font-size 0.5s;
+}
+ 
+nav{
+    width: 100%;
+    background-color:black;
+    height: 60px;
+    text-align: right;
+}
+nav ul{
+    margin-right: 45px;
+}
+nav li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+nav a:hover, .active {
+    color: yellow;
+    border-top: 4px solide orange;
+    border-bottom: 4px solide orange;
+}
+nav input[type=checkbox], .nav-mobile {
+    display: none;
+}
+
+nav input[type=checkbox]:checked ~ ul 
+  {
+    
+    display: block;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+section h1{  
+    text-align: center;
+    font-family: 'Nosifer', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+.impaire {
+    background-color: #e755bc; 
+    transition:background-color 5s;   
+}
+
+.impaire:hover {
+    background-color: rgb(242, 195, 195);
+    transition:background-color 5s; 
+}
+
+.impaire {
+    background-color: rgb(242, 195, 195); 
+    transition:background-color 5s;   
+}
+
+.paire:hover {
+    background-color: #e755bc; 
+    transition:background-color 5s;   
+}
+
+article{
+    display: inline-block;
+    width: 25%;
+    border: 2px solid black;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin: 20px;
+    padding-top: 12px;
+    background-color: #e4e6e3;
+    box-shadow: 4px 4px 12px grey;
+}
+article.hover {
+   position: relative;
+   left: 4px;
+   top: 4px;
+   border: 2px solid #f60;
+   box-shadow: 0px 0px 12px #fc0;
+   background-color: #fff;
+   transition: background-color 2s; box-shadow 2s;
+
+}
+
+figcaption{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.img-voit{
+    width: 100%;
+}
+.desc {
+   padding: 5px;
+} 
+
+
+
+.content{
+    max-width: 800px;
+    margin: auto;
+}
+ 
+.voitures {
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+
+
+.gauche {
+    width: 25%;
+    float: left;
+    margin-right: 5%;
+}
+
+.droite {
+    width: 60%;
+    float: left;
+}
+
+.content:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+footer{
+    width: 100%;
+    background-color: #666;
+    height: 70px;
+    line-height: 70px;
+    color: #ccc;
+    text-align: center;
+    border-top: 2px solid #000;
+    font-style: italic;
+}
+
+
+
+
+
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    header h1{
+        font-size: 45PX;
+        
+    }
+}    
+ @media screen and (max-width: 900px) {
+        header h1{
+            font-size: 80%;
+            text-shadow: 0px 0px 15px black;
+            color:white
+        } 
+        nav {
+        text-align: center;
+        }   
+        nav ul {
+           display: none; 
+        }
+        .nav-mobile {
+            display: block;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        nav li {
+            background-color: #8B0149;
+            width: 100%;
+            border-bottom: 1px solid black;
+            position: relative;
+            box-shadow: 5px 5px 10px black;
+        }
+}
+    
+     </style>
         <header>
             <h1>GROUPE6 Prescott</h1>
         </header>    
