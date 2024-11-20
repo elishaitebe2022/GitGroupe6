@@ -6,9 +6,26 @@
     <title>Page de TALA MIGUEL - Groupe 6</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Vidéo de fond */
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        video#background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.6); /* Réduit un peu la luminosité pour améliorer la lisibilité */
+        }
+
         /* Couleur de l'en-tête */
         header {
-            background-color: #4CAF50;
+            background-color: rgba(76, 175, 80, 0.9); /* Transparent pour laisser voir la vidéo */
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -17,13 +34,13 @@
         /* Contenu principal */
         main {
             font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #fff; /* Texte en blanc pour contraster avec la vidéo */
+            background: transparent;
             padding: 20px;
             text-align: center;
         }
 
-        /* Style du bouton */
+        /* Style des boutons */
         button {
             background-color: #4CAF50;
             color: white;
@@ -32,9 +49,11 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
+            transition: transform 0.3s ease;
         }
 
         button:hover {
+            transform: scale(1.1); /* Effet de zoom */
             background-color: #45a049;
         }
 
@@ -49,9 +68,62 @@
             text-decoration: underline;
         }
 
+        /* Section activités */
+        .activities {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(232, 245, 233, 0.8); /* Transparent pour laisser voir la vidéo */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .activities h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .activity-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-item img:hover {
+            transform: scale(1.1); /* Zoom sur l'image au survol */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .activity-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .activity-item p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* Animation dynamique */
+        .activity-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Pied de page */
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.8); /* Transparent pour laisser voir la vidéo */
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -62,7 +134,13 @@
     </style>
 </head>
 <body>
-    <!-- En-tête avec le numéro de groupe et le nom -->
+    <!-- Vidéo de fond -->
+    <video id="background-video" autoplay loop muted>
+        <source src="8135594-hd_1080_1920_25fps.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos.
+    </video>
+
+    <!-- En-tête -->
     <header>
         <h1>GROUPE 6 - TALA MIGUEL</h1>
     </header>
@@ -70,18 +148,65 @@
     <!-- Contenu principal -->
     <main>
         <p>Bienvenue sur la page de TALA MIGUEL, membre du Groupe 6.</p>
-        <!-- Lien de retour vers la page d'accueil -->
+        <p>Ce qui m'a inspiré à me lancer dans la création de contenu, c'est mon envie de partager ma passion pour la technologie et la créativité. J'ai toujours été fasciné par le pouvoir des médias numériques à transmettre des idées, inspirer les autres, et créer des connexions à travers le monde. Cette motivation m'encourage chaque jour à explorer de nouvelles façons de communiquer des idées, d'apprendre et de grandir.</p>
+
+        <!-- Lien de retour -->
         <a href="index.html">Retour à la page principale</a>
 
         <!-- Bouton Menu 1 -->
         <div style="margin-top: 20px;">
             <button onclick="alert('Menu 1 cliqué !')">Menu 1</button>
         </div>
+
+        <!-- Section des activités -->
+        <section class="activities">
+            <h2>Mes Activités de Création de Contenu</h2>
+
+            <div class="activity-item">
+                <img src="Types-de-createurs-de-contenu.webp" alt="Vidéo YouTube">
+                <div>
+                    <h3>1. Création de vidéos YouTube</h3>
+                    <p>Je produis du contenu éducatif et divertissant, en explorant des sujets variés comme la technologie et la motivation.</p>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <img src="0*DNq-ARrr1EJKpnJe.jpg" alt="Logo et Design">
+                <div>
+                    <h3>2. Conception de logos et de designs</h3>
+                    <p>Avec des outils comme Photoshop et Canva, je crée des visuels uniques pour des projets personnels et professionnels.</p>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <img src="Meilleur-logiciel-de-montage-video.jpg" alt="Montage Vidéo">
+                <div>
+                    <h3>3. Montage vidéo</h3>
+                    <p>J’aime monter des vidéos pour leur donner une touche professionnelle et captivante.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Pied de page avec copyright -->
+    <!-- Pied de page -->
     <footer>
         <p>Copyright tous droits réservés Groupe 6</p>
     </footer>
+
+    <script>
+        // Animation dynamique
+        document.addEventListener('scroll', () => {
+            const activityItems = document.querySelectorAll('.activity-item');
+            const triggerBottom = window.innerHeight / 1.1;
+
+            activityItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+
+                if (itemTop < triggerBottom) {
+                    item.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
