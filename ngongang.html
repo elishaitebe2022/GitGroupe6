@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Le Meilleur Professeur de GitHub</title>
+    <title>Keyce Informatique</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -18,19 +18,18 @@
             background-color: #007BFF;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
         }
 
         header p {
             font-size: 1.2em;
             margin: 5px;
         }
-
         .buttons {
             display: flex;
             justify-content: space-between;
@@ -47,9 +46,35 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
 
-        .btn:hover {
-            background-color: #0056b3;
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #007BFF;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #555;
         }
 
         footer {
@@ -61,47 +86,53 @@
             bottom: 0;
             width: 100%;
         }
-
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .message {
-            font-size: 1.5em;
-            margin-top: 20px;
-            color: #FF6347;
-        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Le Meilleur Professeur de GitHub</h1>
-        <p>Numéro du groupe: 1 | Nom du membre: NGONGANG</p>
+        <h1>Numéro du groupe: 6 | Nom du membre: NGONGANG</h1>
         <div class="buttons">
             <button class="btn" onclick="showMessage()">Menu</button>
             <button class="btn" onclick="window.location.href='index.html'">Retour vers la page d'accueil</button>
         </div>
     </header>
-
+        <h1>Keyce Informatique</h1>
+        <p>Une école dédiée à l'innovation, la technologie et l'excellence en informatique.</p>
     <div class="content">
-        <p>Bienvenue sur cette page dédiée au meilleur professeur de GitHub. Ce professeur incarne l'esprit d'innovation et d'apprentissage continu. Ses contributions sont essentielles à la communauté open source et il est un modèle pour les développeurs du monde entier. Grâce à lui, de nombreux projets ont vu le jour et ont évolué avec succès.</p>
-        <p>Son expertise dans le domaine de la programmation et sa pédagogie sont incomparables. Ce professeur sait comment motiver ses élèves et les guider vers la réussite dans leurs projets GitHub. Son impact sur la communauté est indéniable.</p>
-        <p>Nous lui rendons hommage aujourd'hui pour son dévouement et son travail incroyable. Merci pour tout ce que vous faites !</p>
+        <div class="card">
+            <h3>Une école d'excellence</h3>
+            <p>Keyce Informatique se distingue par la qualité de son enseignement et la compétence de ses formateurs.</p>
+        </div>
+        <div class="card">
+            <h3>Formation de qualité</h3>
+            <p>Nous offrons des formations intensives adaptées aux besoins actuels du marché de l'informatique.</p>
+        </div>
+        <div class="card">
+            <h3>Un environnement innovant</h3>
+            <p>Nos étudiants bénéficient d'un cadre propice à l'apprentissage, avec des technologies de pointe à leur disposition.</p>
+        </div>
+        <div class="card">
+            <h3>Encadrement personnalisé</h3>
+            <p>Nos enseignants suivent chaque étudiant pour garantir leur réussite et les aider à atteindre leurs objectifs.</p>
+        </div>
+        <div class="card">
+            <h3>Des projets concrets</h3>
+            <p>Les projets pratiques sont au cœur de notre pédagogie, permettant à nos étudiants de se confronter à des défis réels.</p>
+        </div>
+        <div class="card">
+            <h3>Une communauté dynamique</h3>
+            <p>Keyce Informatique offre une communauté active d'alumni et de professionnels qui partagent leurs connaissances et expériences.</p>
+        </div>
     </div>
 
-    <div id="message" class="message"></div>
-
     <footer>
-        <p>&copy; 2024 Groupe 42 - Tous droits réservés</p>
+        <p>&copy; 2024 Keyce Informatique - Tous droits réservés</p>
     </footer>
-
     <script>
         function showMessage() {
             document.getElementById('message').textContent = "Pour le meilleur prof de Keyce!";
         }
     </script>
-
 </body>
 </html>
